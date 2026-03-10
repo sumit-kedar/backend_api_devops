@@ -17,7 +17,7 @@ resources:
 - repo: self
 
 variables:  
-  IMAGE_NAME: sumitpdocker/album-backend-api
+  IMAGE_NAME: sumitkdocker/album-backend-api
   CONTAINERAPPS_APP: album-backend-api
   CONTAINERAPPS_ENVIRONMENT: aca-environment
   RESOURCE_GROUP: rg-containerapps-azure-pipelines
@@ -62,7 +62,7 @@ stages:
     - task: AzureContainerApps@1
       displayName: Deploy new container version
       inputs:
-        azureSubscription: 'azure-containersapp-connection'
+        azureSubscription: 'azure-containerapps-connection'
         imageToDeploy: '$(IMAGE_NAME):$(TAG)'
         containerAppName: '$(CONTAINERAPPS_APP)'
         resourceGroup: '$(RESOURCE_GROUP)'

@@ -38,7 +38,7 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/backend_api_devops/backend_api_devops/Dockerfile'
+        dockerfile: '$(Build.SourcesDirectory)/backend_api_devops/Dockerfile'
         repository: $(IMAGE_NAME)
         tags: |
           $(TAG)

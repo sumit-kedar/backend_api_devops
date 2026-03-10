@@ -56,7 +56,8 @@ stages:
   - job: Deploy
     displayName: Deploy
     pool:
-      vmImage: ubuntu-latest
+      #vmImage: ubuntu-latest
+      name: Default
     steps:
 
     - task: AzureContainerApps@1
